@@ -4,11 +4,12 @@ from groq import Groq
 
 load_dotenv() # โหลดค่าจาก .env
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-def ask_llm(prompt):
-
+def def ask_llm(prompt):
     completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
-       {"role": "system", "content": "You are a helpful AI assistant. Answer the user's questions clearly in Thai."},
+        messages=[
+            # เพิ่มบรรทัดนี้เพื่อกำหนดหน้าที่ให้ AI
+            {"role": "system", "content": "You are a helpful assistant. Provide detailed answers in Thai and do not repeat the user's input."},
             {"role": "user", "content": prompt}
         ]
     )
