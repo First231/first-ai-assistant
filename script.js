@@ -2,7 +2,7 @@ async function send(){
 
 let message = document.getElementById("message").value
 
-let res = await fetch("https://first-ai-assistant-ai-chatbot.onrender.com/chat",{
+let res = await fetch("https://first-ai-assistant-ai-chatbot.onrender.com",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
