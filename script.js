@@ -3,7 +3,7 @@ async function send(){
     if(!message) return; // กันส่งค่าว่าง
 
     // 1. ต้องเติม /chat ต่อท้าย URL
-    let res = await fetch("https://first-ai-assistant-ai-chatbot.onrender.com/chat", {
+    let res = await fetch("git commit -m "Update LLM prompt and fix script URL"/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
